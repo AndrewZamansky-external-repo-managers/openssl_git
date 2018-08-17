@@ -1,7 +1,12 @@
 /* opensslconf.h */
 /* WARNING: Generated automatically from opensslconf.h.in by Configure. */
 
+#ifdef  __cplusplus
+extern "C" {
+#endif
 /* OpenSSL was configured with the following options: */
+
+
 #undef OPENSSL_SYSNAME_WIN32
 #if defined(_WIN32)
 # define OPENSSL_SYSNAME_WIN32
@@ -11,42 +16,54 @@
 #define TLS_CURVE_CUSTOM 0x02//az
 
 #ifndef OPENSSL_DOING_MAKEDEPEND
-# ifndef OPENSSL_NO_CAPIENG
-#  define OPENSSL_NO_CAPIENG
-# endif
-# ifndef OPENSSL_NO_EC_NISTP_64_GCC_128
-#  define OPENSSL_NO_EC_NISTP_64_GCC_128
-# endif
-# ifndef OPENSSL_NO_GMP
-#  define OPENSSL_NO_GMP
-# endif
-# ifndef OPENSSL_NO_GOST
-#  define OPENSSL_NO_GOST
-# endif
-# ifndef OPENSSL_NO_HW_PADLOCK
-#  define OPENSSL_NO_HW_PADLOCK
-# endif
-# ifndef OPENSSL_NO_JPAKE
-#  define OPENSSL_NO_JPAKE
-# endif
-# ifndef OPENSSL_NO_KRB5
-#  define OPENSSL_NO_KRB5
-# endif
-# ifndef OPENSSL_NO_MD2
-#  define OPENSSL_NO_MD2
-# endif
-# ifndef OPENSSL_NO_RC5
-#  define OPENSSL_NO_RC5
-# endif
-# ifndef OPENSSL_NO_RFC3779
-#  define OPENSSL_NO_RFC3779
-# endif
-# ifndef OPENSSL_NO_SCTP
-#  define OPENSSL_NO_SCTP
-# endif
-# ifndef OPENSSL_NO_STORE
-#  define OPENSSL_NO_STORE
-# endif
+
+
+#ifndef OPENSSL_NO_GMP
+# define OPENSSL_NO_GMP
+#endif
+#ifndef OPENSSL_NO_IDEA
+# define OPENSSL_NO_IDEA
+#endif
+#ifndef OPENSSL_NO_JPAKE
+# define OPENSSL_NO_JPAKE
+#endif
+#ifndef OPENSSL_NO_KRB5
+# define OPENSSL_NO_KRB5
+#endif
+#ifndef OPENSSL_NO_LIBUNBOUND
+# define OPENSSL_NO_LIBUNBOUND
+#endif
+#ifndef OPENSSL_NO_MD2
+# define OPENSSL_NO_MD2
+#endif
+#ifndef OPENSSL_NO_MDC2
+# define OPENSSL_NO_MDC2
+#endif
+#ifndef OPENSSL_NO_RC5
+# define OPENSSL_NO_RC5
+#endif
+#ifndef OPENSSL_NO_RFC3779
+# define OPENSSL_NO_RFC3779
+#endif
+#ifndef OPENSSL_NO_SCTP
+# define OPENSSL_NO_SCTP
+#endif
+#ifndef OPENSSL_NO_SSL_TRACE
+# define OPENSSL_NO_SSL_TRACE
+#endif
+#ifndef OPENSSL_NO_SSL2
+# define OPENSSL_NO_SSL2
+#endif
+#ifndef OPENSSL_NO_SSL3
+# define OPENSSL_NO_SSL3
+#endif
+#ifndef OPENSSL_NO_STORE
+# define OPENSSL_NO_STORE
+#endif
+#ifndef OPENSSL_NO_WEAK_SSL_CIPHERS
+# define OPENSSL_NO_WEAK_SSL_CIPHERS
+#endif
+
 #endif /* OPENSSL_DOING_MAKEDEPEND */
 
 #ifndef OPENSSL_THREADS
@@ -380,3 +397,6 @@
 
 # endif /* DES_DEFAULT_OPTIONS */
 #endif /* HEADER_DES_LOCL_H */
+#ifdef  __cplusplus
+}
+#endif

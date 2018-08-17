@@ -20,11 +20,24 @@ config  OPENSSL_DH
 	bool   "dh"
 	default n
 
+config  OPENSSL_CMS
+	bool   "cms"
+	default n
+
+config  OPENSSL_EC
+	bool   "ec"
+	select OPENSSL_CMS
+	default n
+	
 config  OPENSSL_SOCKET
 	bool   "enable sockets"
 	default n
 
+config  OPENSSL_RIPEMD
+	bool   "enable ripemd-160"
+	default n
 
-config OPENSSL_GIT_COMMIT_HASH
+
+config OPENSSL_GIT_MANAGER_COMMIT_HASH
 	string "OpenSSL git commit hash"
 	default ""
