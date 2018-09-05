@@ -71,6 +71,11 @@ ifeq ($(strip $(CONFIG_INCLUDE_OPENSSL)),y)
 
     DEFINES += USE_SOCKETS
 
+    ifeq ($(strip $(CONFIG_CURL_CUSTOM_SOCKET_LAYER)),y)
+        DEFINES += USE_CUSTOM_SOCKET_IN_COMPILED_MODULE
+    endif
+
+
     ifneq ($(strip $(CONFIG_OPENSSL_MD5)),y)
         DEFINES += OPENSSL_NO_MD5
     endif
