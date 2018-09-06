@@ -27,7 +27,7 @@ ifeq ($(strip $(CONFIG_INCLUDE_OPENSSL)),y)
     # the same as required by application
     CURR_GIT_REPO_DIR :=$(OPENSSL_PATH)
     CURR_GIT_COMMIT_HASH_VARIABLE :=OPENSSL_GIT_COMMIT_HASH
-    CURR_GIT_BUNDLE :=$(CURR_OPENSSL_COMPONENT_LOCATION)/openssl.bundle
+    #CURR_GIT_BUNDLE :=$(CURR_OPENSSL_COMPONENT_LOCATION)/openssl.bundle
     include $(MAKEFILES_ROOT_DIR)/_include_functions/git_prebuild_repo_check.mk
 
 
@@ -69,9 +69,7 @@ ifeq ($(strip $(CONFIG_INCLUDE_OPENSSL)),y)
 
 
 
-    DEFINES += USE_SOCKETS
-
-    ifeq ($(strip $(CONFIG_CURL_CUSTOM_SOCKET_LAYER)),y)
+    ifeq ($(strip $(CONFIG_CUSTOM_SOCKET_LAYER)),y)
         DEFINES += USE_CUSTOM_SOCKET_IN_COMPILED_MODULE
     endif
 

@@ -6,11 +6,15 @@ extern "C" {
 #endif
 /* OpenSSL was configured with the following options: */
 #include "project_config.h"
-#ifdef  CONFIG_CURL_CUSTOM_SOCKET_LAYER
+#ifdef  CONFIG_CUSTOM_SOCKET_LAYER
 	#define WINDOWS
 	#include "sys/socket.h"
 	#define  INVALID_SOCKET (-1)
 	#define	INADDR_ANY		((unsigned long) 0x00000000)
+#endif
+
+#ifndef USE_SOCKETS
+	#define USE_SOCKETS 1
 #endif
 
 #undef OPENSSL_SYSNAME_WIN32
