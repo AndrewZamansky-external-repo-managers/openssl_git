@@ -41,12 +41,13 @@ DUMMY := $(call ADD_TO_GLOBAL_DEFINES ,OPENSSL_NO_ENGINE) #NoDynamicEngines.
 # files, they are distributed over all source tree.
 # this version of open ssl is expecting to find these files
 # in systmem path (e.g. in linux /usr/include/openssl/file.h) so these
-# files were just dublicatred in $(CURR_COMPONENT_DIR)/include
+# files were just dublicatred in $(CURR_COMPONENT_DIR)/openssl_git/include
 
-INCLUDE_DIR += $(CURR_COMPONENT_DIR)/include
+# CURR_COMPONENT_DIR is pointing to parent directory
+INCLUDE_DIR += $(CURR_COMPONENT_DIR)/openssl_git/include
 
 
-INCLUDE_DIR += $(CURR_COMPONENT_DIR)/include/openssl
+INCLUDE_DIR += $(CURR_COMPONENT_DIR)/openssl_git/include/openssl
 INCLUDE_DIR += $(OPENSSL_PATH)/include
 INCLUDE_DIR += $(OPENSSL_PATH)/crypto
 INCLUDE_DIR += $(OPENSSL_PATH)/crypto/asn1
