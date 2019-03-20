@@ -6,7 +6,7 @@ extern "C" {
 #endif
 /* OpenSSL was configured with the following options: */
 #include "project_config.h"
-#ifdef  CONFIG_CUSTOM_SOCKET_LAYER
+#ifdef  CONFIG_USE_INTERNAL_SOCKETS_IMPLEMENTATION
 	#define WINDOWS
 	#include "sys/socket.h"
 	#define  INVALID_SOCKET (-1)
